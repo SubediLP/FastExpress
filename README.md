@@ -4,6 +4,8 @@ Courier Management System
 
 Step 1
   Download the file
+  
+ <br>
 Step 2
   extract it and put it into xampp/htdocs/
 Step 3
