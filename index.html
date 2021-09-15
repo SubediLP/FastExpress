@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Fast Express</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="login-text">
+      <button class="cta"><i class="fas fa-chevron-down fa-1x"></i></button>
+      <div class="text">
+        <div class="login-container">
+        <form action="login_system.php" method="POST" class="sign-in-form">            <h1>LOGIN</h1>
+            <div>
+              <label>Username</label>
+              <input type="text" name="username" placeholder="Enter your username here" required>
+            </div>
+            <div>
+              <label>Password</label>
+              <input type="password" name="userpassword" placeholder="Enter your password here" required>
+            </div>
+            <div class="select ">
+                    <select name="position" required>
+                      <option selected>Choose Position...</option>
+                      <option>Admin</option>
+                      <option>Branch</option>
+                      <option>Staff</option>
+                    </select>
+                  </div>
+            <input type="submit" name="login" value="LOGIN">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="call-text">
+      <h1><span>Fast Express</span></h1>
+      <a href="trackorder.php"><button>Track Order</button></a>
+    </div>
+
+  </div>
+  <script>
+    var cta = document.querySelector(".cta");
+    var check = 0;
+
+    cta.addEventListener('click', function(e) {
+      var text = e.target.nextElementSibling;
+      var loginText = e.target.parentElement;
+      text.classList.toggle('show-hide');
+      loginText.classList.toggle('expand');
+      if (check == 0) {
+        cta.innerHTML = "<i class=\"fas fa-chevron-up\"></i>";
+        check++;
+      } else {
+        cta.innerHTML = "<i class=\"fas fa-chevron-down\"></i>";
+        check = 0;
+      }
+    })
+  </script>
+</body>
+
+</html>
